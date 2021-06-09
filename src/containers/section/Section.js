@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import List from '../../components/list'
 import './Section.css';
 
 class Section extends Component {
@@ -11,14 +10,12 @@ class Section extends Component {
 
   render() { 
 
-    const {listData} = this.props;
+    const {className, children} = this.props;
     
     return (
 
-        <div className="Section">
-          
-          <List data={listData} />
-
+        <div className={className}>
+          {children}
         </div>
       );
       
